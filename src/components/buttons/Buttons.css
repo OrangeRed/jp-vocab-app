@@ -1,0 +1,23 @@
+.btn-container {
+  display: flex;
+  justify-content: center;
+  padding: 0.25rem;
+}
+
+.btn-good,
+.btn-again {
+  width: 75px;
+  margin: 0.25rem;
+  padding: 0.5em 1em;
+  border-radius: 0.3em;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.btn-again {
+  background-color: #ffd1dc;
+}
+
+.btn-good {
+  background-color: #c1e1c1;
+}
