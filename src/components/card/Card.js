@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import Buttons from "../buttons/Buttons";
 import "./Card.css";
 
-const Card = ({ card }) => {
+const Card = ({ card, setCard }) => {
   const [flip, setFlip] = useState(false);
   const [dimensions, setDimensions] = useState({
     height: "initial",
@@ -23,7 +23,7 @@ const Card = ({ card }) => {
       height: Math.max(frontHeight, backHeight, 200),
       width: Math.max(frontWidth, backWidth, 300),
     });
-  }, [card]);
+  }, [card.word, card.reading, card.meanings]);
 
   return (
     <div className="card-container">
@@ -52,7 +52,7 @@ const Card = ({ card }) => {
           </div>
         </div>
       </div>
-      <Buttons dimensions={dimensions} />
+      <Buttons dimensions={dimensions} setCard={setCard} />
     </div>
   );
 };

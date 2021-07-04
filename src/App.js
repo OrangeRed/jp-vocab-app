@@ -4,8 +4,9 @@ import "./styles/GlobalStyles.css";
 
 const App = () => {
   const [card, setCard] = useState(TEST_CARD);
+  const [newCard, setNewCard] = useState(true);
 
-  return <Card card={card} />;
+  return <Card card={card} setCard={setCard} />;
 };
 
 const TEST_CARD = {
